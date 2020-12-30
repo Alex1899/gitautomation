@@ -5,7 +5,7 @@ import requests
 
 def create():
     repoName = str(sys.argv[1])
-    headers = {'Authorization': 'token 813e9fd5378b8307102c5709d850e7b68f24c217'}
+    #headers = {'Authorization': 'token INSERT_TOKEN_HERE'}
     req = requests.post('https://api.github.com/user/repos', headers=headers, json={'name': repoName})
    
     if('name' in req.json().keys()):
